@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE c3p0-config [
+        <!ELEMENT c3p0-config (default-config|named-config)*>
+        <!ELEMENT default-config (property)*>
+        <!ELEMENT property (#PCDATA)>
+        <!ATTLIST property
+                name CDATA #REQUIRED>
+        <!ELEMENT named-config (property)*>
+        <!ATTLIST named-config
+                name CDATA #REQUIRED>
+        ]>
+<c3p0-config>
+
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql:///web_08</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <property name="initialPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+    </default-config>
+
+    <named-config name="hearing">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql:///web_08</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+    </named-config>
+
+
+</c3p0-config>
